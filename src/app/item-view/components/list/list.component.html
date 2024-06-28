@@ -1,0 +1,23 @@
+<!-- Tabla similar a una PB -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Item</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="
+    let item of itemList;
+    let i = index;
+  ">
+      <th scope="row"class="text-primary"> {{ i + 1 }}.</th>
+        <td>{{ item.name }} </td>
+        <td>{{ item.price * item.qty }}</td>
+        <td>{{ item.qty }}</td>
+        <td><button (click)="onDeleteItem( item.id )" class="btn btn-danger">X</button></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,31 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<h4>Add Item</h4>
+
+<form class="row" (ngSubmit)="emitItem()">
+
+  <input
+    type="text"
+    [(ngModel)]="item.name"
+    name="name"
+    class="form-control mb-2"
+    placeholder="Nombre">
+
+  <input
+    type="number"
+    [(ngModel)]="item.price"
+    name="price"
+    class="form-control mb-2"
+    placeholder="Unit Price">
+
+  <input
+   type="number"
+   [(ngModel)]="item.qty"
+   name="itemQty"
+   class="form-control mb-2"
+   placeholder="Items Quantity">
+  
+  <button type="submit" class="btn btn-primary">
+    Agregar
+  </button>
+
+</form>
